@@ -1,6 +1,7 @@
 'use client';
 
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import { useMemo, useEffect, useReducer, useCallback } from 'react';
 
 import { endpoints, getBaseUrl, BaseUrlTypes } from 'src/utils/axios';
@@ -8,7 +9,6 @@ import { endpoints, getBaseUrl, BaseUrlTypes } from 'src/utils/axios';
 import { AuthContext } from './auth-context';
 import { setSession, isValidToken } from './utils';
 import { AuthUserType, ActionMapType, AuthStateType } from '../../types';
-import { jwtDecode } from 'jwt-decode';
 
 // ----------------------------------------------------------------------
 /**
